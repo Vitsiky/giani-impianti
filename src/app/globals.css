@@ -1,26 +1,52 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: #0988bf;
+  --color-on-primary: #ffffff;
+  --color-marino: #0b3a5b;
+  --color-on-marino: #ffffff;
+  --color-celeste: #55b5e6;
+  --color-background: #ffffff;
+  --color-surface: #f0f8fd;
+  --color-foreground: #0b2538;
+  --color-muted: #eaf3f9;
+  --color-muted-foreground: #547083;
+  --color-border: #dbe9f2;
+  --color-destructive: #dc2626;
+  --color-ring: #0988bf;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--color-primary);
+  --color-on-primary: var(--color-on-primary);
+  --color-marino: var(--color-marino);
+  --color-on-marino: var(--color-on-marino);
+  --color-celeste: var(--color-celeste);
+  --color-background: var(--color-background);
+  --color-surface: var(--color-surface);
+  --color-foreground: var(--color-foreground);
+  --color-muted: var(--color-muted);
+  --color-muted-foreground: var(--color-muted-foreground);
+  --color-border: var(--color-border);
+  --color-destructive: var(--color-destructive);
+  --color-ring: var(--color-ring);
+  --font-heading: var(--font-lexend);
+  --font-body: var(--font-source-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-padding-top: 4.5rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-body), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading), sans-serif;
 }
