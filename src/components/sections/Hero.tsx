@@ -11,7 +11,7 @@ export function Hero() {
       <Container>
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-primary">
+            <p className="text-sm font-semibold tracking-wide text-primary">
               Idraulica · Riscaldamento · Climatizzazione
             </p>
             <h1 className="mt-4 max-w-xl font-heading text-4xl font-black leading-[1.05] tracking-tight text-marino sm:text-5xl">
