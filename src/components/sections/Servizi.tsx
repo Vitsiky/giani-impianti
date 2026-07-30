@@ -1,39 +1,61 @@
 import { Droplet, Flame, Snowflake } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/ui/Reveal";
 import { services } from "@/lib/content/services";
 
-const icons = [Droplet, Flame, Snowflake];
-
 export function Servizi() {
+  const [idraulica, riscaldamento, climatizzazione] = services;
+
   return (
-    <section id="servizi" className="border-t border-border py-16 sm:py-24">
+    <section id="servizi" className="py-20 sm:py-28">
       <Container>
-        <h2 className="font-heading text-3xl font-bold tracking-tight text-marino sm:text-4xl">
-          Servizi
-        </h2>
-        <p className="mt-3 max-w-2xl text-lg text-muted-foreground">
-          Interventi su misura per privati e attività commerciali, in tutta la Toscana.
-        </p>
-        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
-          {services.map((service, i) => {
-            const Icon = icons[i];
-            return (
-              <div
-                key={service.slug}
-                className="rounded-xl border border-border bg-background p-6 shadow-sm"
-              >
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-surface">
-                  <Icon className="h-6 w-6 text-primary" aria-hidden="true" strokeWidth={1.75} />
-                </span>
-                <h3 className="mt-4 font-heading text-lg font-semibold text-marino">
-                  {service.title}
+        <Reveal>
+          <h2 className="font-heading text-3xl font-black tracking-tight text-marino sm:text-4xl">
+            Servizi
+          </h2>
+          <p className="mt-3 max-w-xl text-lg text-muted-foreground">
+            Interventi su misura per privati e attività commerciali, in tutta la Toscana.
+          </p>
+        </Reveal>
+
+        <div className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-3 lg:grid-rows-2">
+          <Reveal delay={0.05} className="lg:col-span-2 lg:row-span-2">
+            <div className="flex h-full flex-col justify-between rounded-[28px] bg-marino p-8 text-on-marino sm:p-10">
+              <div>
+                <Snowflake className="h-9 w-9 text-celeste" aria-hidden="true" strokeWidth={1.5} />
+                <h3 className="mt-5 font-heading text-2xl font-bold sm:text-3xl">
+                  {climatizzazione.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {service.description}
+                <p className="mt-3 max-w-md text-base leading-relaxed text-white/75">
+                  {climatizzazione.description}
                 </p>
               </div>
-            );
-          })}
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <div className="h-full rounded-[28px] border border-border bg-background p-7">
+              <Droplet className="h-8 w-8 text-primary" aria-hidden="true" strokeWidth={1.5} />
+              <h3 className="mt-4 font-heading text-xl font-bold text-marino">
+                {idraulica.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {idraulica.description}
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.15}>
+            <div className="h-full rounded-[28px] border border-border bg-background p-7">
+              <Flame className="h-8 w-8 text-primary" aria-hidden="true" strokeWidth={1.5} />
+              <h3 className="mt-4 font-heading text-xl font-bold text-marino">
+                {riscaldamento.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {riscaldamento.description}
+              </p>
+            </div>
+          </Reveal>
         </div>
       </Container>
     </section>

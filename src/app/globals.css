@@ -30,8 +30,8 @@
   --color-border: var(--color-border);
   --color-destructive: var(--color-destructive);
   --color-ring: var(--color-ring);
-  --font-heading: var(--font-lexend);
-  --font-body: var(--font-source-sans);
+  --font-heading: var(--font-archivo);
+  --font-body: var(--font-public-sans);
 }
 
 html {

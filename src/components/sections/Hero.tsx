@@ -1,33 +1,54 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
+import { WaveDivider } from "@/components/ui/WaveDivider";
 import { WhatsAppIcon } from "@/components/ui/icons/WhatsAppIcon";
 import { WHATSAPP_URL, PHONE_DISPLAY, PHONE_HREF } from "@/lib/content/contact";
 
 export function Hero() {
   return (
-    <section id="top" className="py-16 sm:py-24">
+    <section id="top" className="relative overflow-hidden bg-surface pb-24 pt-14 sm:pt-20">
       <Container>
-        <p className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-          Idraulica · Riscaldamento · Climatizzazione
-        </p>
-        <h1 className="mt-4 max-w-3xl font-heading text-4xl font-bold leading-[1.1] tracking-tight text-marino sm:text-5xl lg:text-6xl">
-          Impianti fatti bene, in tutta la Toscana.
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-          Installazione e assistenza su impianti idraulici, riscaldamento e climatizzazione/
-          refrigerazione, per privati e attività commerciali. Operiamo in tutta la Toscana,
-          disponibili anche per trasferte.
-        </p>
-        <div className="mt-8 flex flex-wrap gap-4">
-          <Button href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" variant="primary" size="lg">
-            <WhatsAppIcon className="h-5 w-5" aria-hidden="true" />
-            Scrivici su WhatsApp
-          </Button>
-          <Button href={`tel:${PHONE_HREF}`} variant="outline" size="lg">
-            Chiama {PHONE_DISPLAY}
-          </Button>
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wide text-primary">
+              Idraulica · Riscaldamento · Climatizzazione
+            </p>
+            <h1 className="mt-4 max-w-xl font-heading text-4xl font-black leading-[1.05] tracking-tight text-marino sm:text-5xl">
+              L&apos;impianto giusto, senza sorprese.
+            </h1>
+            <p className="mt-5 max-w-md text-lg leading-relaxed text-muted-foreground">
+              Installazione e assistenza su impianti idraulici, riscaldamento e
+              climatizzazione in tutta la Toscana. Anche per trasferte.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" variant="primary" size="lg">
+                <WhatsAppIcon className="h-5 w-5" aria-hidden="true" />
+                Scrivici su WhatsApp
+              </Button>
+              <Button href={`tel:${PHONE_HREF}`} variant="outline" size="lg" className="rounded-full">
+                {PHONE_DISPLAY}
+              </Button>
+            </div>
+          </div>
+
+          <div className="relative mx-auto aspect-square w-full max-w-sm lg:max-w-none">
+            <div className="absolute inset-0 rounded-[40%_60%_55%_45%/50%_45%_55%_50%] bg-gradient-to-br from-celeste/25 via-primary/10 to-transparent" />
+            <div className="relative flex h-full items-center justify-center">
+              <Image
+                src="/brand/logo.png"
+                alt="Giani Impianti"
+                width={420}
+                height={420}
+                priority
+                className="w-3/4 max-w-[320px] drop-shadow-[0_18px_40px_rgba(11,58,91,0.18)]"
+              />
+            </div>
+          </div>
         </div>
       </Container>
+
+      <WaveDivider fill="var(--color-background)" className="absolute inset-x-0 bottom-0 h-14 sm:h-20" />
     </section>
   );
 }

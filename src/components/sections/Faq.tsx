@@ -1,28 +1,30 @@
-import { ChevronDown } from "lucide-react";
+import { Plus } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/ui/Reveal";
 import { faqItems } from "@/lib/content/faq";
 
 export function Faq() {
   return (
-    <section id="faq" className="border-t border-border py-16 sm:py-24">
+    <section id="faq" className="py-20 sm:py-28">
       <Container>
-        <h2 className="font-heading text-3xl font-bold tracking-tight text-marino sm:text-4xl">
-          Domande frequenti
-        </h2>
-        <div className="mt-10 flex flex-col gap-3">
+        <Reveal>
+          <h2 className="font-heading text-3xl font-black tracking-tight text-marino sm:text-4xl">
+            Domande frequenti
+          </h2>
+        </Reveal>
+        <div className="mt-10 divide-y divide-border border-t border-border">
           {faqItems.map((item) => (
-            <details
-              key={item.question}
-              className="group rounded-xl border border-border bg-background p-5 open:shadow-sm"
-            >
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-heading text-base font-semibold text-marino marker:content-none">
+            <details key={item.question} className="group py-5">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-heading text-lg font-bold text-marino marker:content-none">
                 {item.question}
-                <ChevronDown
-                  className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200 group-open:rotate-180"
+                <Plus
+                  className="h-5 w-5 shrink-0 text-primary transition-transform duration-200 group-open:rotate-45"
                   aria-hidden="true"
                 />
               </summary>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.answer}</p>
+              <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">
+                {item.answer}
+              </p>
             </details>
           ))}
         </div>
