@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Droplet, Flame, Snowflake } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
@@ -20,7 +21,7 @@ export function Servizi() {
 
         <div className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-3 lg:grid-rows-2">
           <Reveal delay={0.05} className="lg:col-span-2 lg:row-span-2">
-            <div className="flex h-full flex-col justify-between rounded-[28px] bg-marino p-8 text-on-marino sm:p-10">
+            <div className="flex h-full flex-col justify-between gap-6 rounded-[28px] bg-marino p-8 text-on-marino sm:flex-row sm:items-end sm:p-10">
               <div>
                 <Snowflake className="h-9 w-9 text-celeste" aria-hidden="true" strokeWidth={1.5} />
                 <h3 className="mt-5 font-heading text-2xl font-bold sm:text-3xl">
@@ -29,6 +30,15 @@ export function Servizi() {
                 <p className="mt-3 max-w-md text-base leading-relaxed text-white/75">
                   {climatizzazione.description}
                 </p>
+              </div>
+              <div className="shrink-0 overflow-hidden rounded-2xl border border-white/15 shadow-lg">
+                <Image
+                  src="/lavori/banco-frigo.png"
+                  alt="Banco frigo installato da Giani Impianti"
+                  width={157}
+                  height={118}
+                  className="h-auto w-36 object-cover sm:w-44"
+                />
               </div>
             </div>
           </Reveal>

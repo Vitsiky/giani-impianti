@@ -32,18 +32,16 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative mx-auto aspect-square w-full max-w-sm lg:max-w-none">
+          <div className="relative mx-auto flex aspect-square w-full max-w-sm items-center justify-center lg:max-w-none">
             <div className="absolute inset-0 rounded-[40%_60%_55%_45%/50%_45%_55%_50%] bg-gradient-to-br from-celeste/25 via-primary/10 to-transparent" />
-            <div className="relative flex h-full items-center justify-center">
-              <Image
-                src="/brand/logo.png"
-                alt="Giani Impianti"
-                width={420}
-                height={420}
-                priority
-                className="w-3/4 max-w-[320px] drop-shadow-[0_18px_40px_rgba(11,58,91,0.18)]"
-              />
-            </div>
+            <Image
+              src="/brand/logo-transparent.png"
+              alt="Giani Impianti"
+              width={420}
+              height={420}
+              priority
+              className="relative w-[85%] max-w-[380px] drop-shadow-[0_18px_40px_rgba(11,58,91,0.18)]"
+            />
           </div>
         </div>
       </Container>
