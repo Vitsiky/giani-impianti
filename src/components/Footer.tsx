@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { InstagramIcon } from "@/components/ui/icons/InstagramIcon";
 import { FacebookIcon } from "@/components/ui/icons/FacebookIcon";
@@ -47,6 +48,10 @@ export function Footer() {
           >
             Instant Web
           </a>
+          {" · "}
+          <Link href="/privacy" className="font-medium text-marino hover:underline">
+            Privacy
+          </Link>
         </p>
       </Container>
     </footer>

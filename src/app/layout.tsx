@@ -16,7 +16,7 @@ const publicSans = Public_Sans({
   display: "swap",
 });
 
-const siteUrl = "https://www.gianimpianti.it";
+const siteUrl = "https://gianiimpianti.com";
 const title = "Giani Impianti — Idraulica, Riscaldamento e Climatizzazione in Toscana";
 const description =
   "Impianti idraulici, riscaldamento e climatizzazione/frigo in tutta la Toscana, disponibili anche per trasferte. Preventivo gratuito su WhatsApp.";
@@ -31,6 +31,9 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+  },
+  verification: {
+    google: "Hji9xcpfdpGTfD3ZcD2-qCBBqSlZJV6l4duDyC0g08s",
   },
   openGraph: {
     type: "website",

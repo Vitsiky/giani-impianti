@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.gianimpianti.it/sitemap.xml",
+    sitemap: "https://gianiimpianti.com/sitemap.xml",
   };
 }

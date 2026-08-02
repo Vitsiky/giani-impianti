@@ -1,6 +1,7 @@
 "use client";
 
 import { useActionState } from "react";
+import Link from "next/link";
 import { Send, Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
@@ -117,6 +118,28 @@ export function Contatti() {
                 />
                 {state.errors?.messaggio && (
                   <p className="text-sm text-destructive">{state.errors.messaggio[0]}</p>
+                )}
+              </div>
+
+              <div className="mt-5 flex flex-col gap-1.5">
+                <div className="flex items-start gap-2.5">
+                  <input
+                    id="privacy"
+                    name="privacy"
+                    type="checkbox"
+                    required
+                    className="mt-0.5 h-4 w-4 shrink-0 rounded border-border text-marino focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  />
+                  <label htmlFor="privacy" className="text-sm text-muted-foreground">
+                    Ho letto e accetto l&apos;
+                    <Link href="/privacy" className="font-medium text-marino underline">
+                      informativa privacy
+                    </Link>
+                    .
+                  </label>
+                </div>
+                {state.errors?.privacy && (
+                  <p className="text-sm text-destructive">{state.errors.privacy[0]}</p>
                 )}
               </div>
 

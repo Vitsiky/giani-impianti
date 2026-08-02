@@ -20,9 +20,9 @@ export function Servizi() {
         </Reveal>
 
         <div className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-3 lg:grid-rows-2">
-          <Reveal delay={0.05} className="lg:col-span-2 lg:row-span-2">
-            <div className="flex h-full flex-col justify-between gap-6 rounded-[28px] bg-marino p-8 text-on-marino sm:flex-row sm:items-end sm:p-10">
-              <div>
+          <div className="lg:col-span-2 lg:row-span-2">
+            <div className="flex h-full flex-col gap-6 rounded-[28px] bg-marino p-8 text-on-marino sm:flex-row sm:p-10">
+              <div className="sm:flex sm:h-full sm:max-w-xs sm:flex-col sm:justify-center">
                 <Snowflake className="h-9 w-9 text-celeste" aria-hidden="true" strokeWidth={1.5} />
                 <h3 className="mt-5 font-heading text-2xl font-bold sm:text-3xl">
                   {climatizzazione.title}
@@ -31,27 +31,38 @@ export function Servizi() {
                   {climatizzazione.description}
                 </p>
               </div>
-              <div className="shrink-0 overflow-hidden rounded-2xl border border-white/15 shadow-lg">
+              <div className="relative h-48 overflow-hidden rounded-2xl border border-white/15 shadow-lg sm:h-auto sm:flex-1">
                 <Image
-                  src="/lavori/banco-frigo.png"
+                  src="/lavori/banco-frigo.jpg"
                   alt="Banco frigo installato da Giani Impianti"
-                  width={157}
-                  height={118}
-                  className="h-auto w-36 object-cover sm:w-44"
+                  fill
+                  sizes="(min-width: 640px) 40vw, 100vw"
+                  className="object-cover"
                 />
               </div>
             </div>
-          </Reveal>
+          </div>
 
           <Reveal delay={0.1}>
-            <div className="h-full rounded-[28px] border border-border bg-background p-7">
-              <Droplet className="h-8 w-8 text-primary" aria-hidden="true" strokeWidth={1.5} />
-              <h3 className="mt-4 font-heading text-xl font-bold text-marino">
-                {idraulica.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {idraulica.description}
-              </p>
+            <div className="flex h-full flex-col justify-between gap-5 rounded-[28px] border border-border bg-background p-7">
+              <div>
+                <Droplet className="h-8 w-8 text-primary" aria-hidden="true" strokeWidth={1.5} />
+                <h3 className="mt-4 font-heading text-xl font-bold text-marino">
+                  {idraulica.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {idraulica.description}
+                </p>
+              </div>
+              <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
+                <Image
+                  src="/lavori/tubazioni-rame.jpg"
+                  alt="Tubazioni in rame installate da Giani Impianti"
+                  width={900}
+                  height={677}
+                  className="h-auto w-full object-cover"
+                />
+              </div>
             </div>
           </Reveal>
 
