@@ -39,6 +39,9 @@ export function Footer() {
           </div>
         </div>
         <p className="mt-6 text-center text-xs text-muted-foreground sm:text-left">
+          Giani Impianti · P.IVA 02535860973 · Sede legale: Via della Repubblica, Prato
+        </p>
+        <p className="mt-2 text-center text-xs text-muted-foreground sm:text-left">
           Sito realizzato da{" "}
           <a
             href="https://www.instantweb.info"
