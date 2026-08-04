@@ -66,6 +66,14 @@ const jsonLd = {
   url: siteUrl,
   description,
   telephone: "+393762315813",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Via Montelupo, 28",
+    addressLocality: "Montespertoli",
+    addressRegion: "FI",
+    postalCode: "50025",
+    addressCountry: "IT",
+  },
   areaServed: {
     "@type": "AdministrativeArea",
     name: "Toscana",

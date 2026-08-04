@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Container } from "@/components/ui/Container";
-import { PHONE_DISPLAY } from "@/lib/content/contact";
+import { PHONE_DISPLAY, ADMIN_EMAIL } from "@/lib/content/contact";
 
 export const metadata: Metadata = {
   title: "Informativa Privacy — Giani Impianti",
@@ -27,9 +27,15 @@ export default function PrivacyPage() {
               Titolare del trattamento
             </h2>
             <p>
-              Giani Impianti, con sede legale in Via della Repubblica, Prato, P.IVA
-              02535860973, contattabile al numero {PHONE_DISPLAY}, è il titolare del
-              trattamento dei dati personali raccolti tramite questo sito.
+              Giani Impianti, con sede legale in Viale della Repubblica, 239, Prato (PO)
+              59100 e sede operativa in Via Montelupo, 28, Montespertoli (FI) 50025, P.IVA
+              02535860973, contattabile al numero {PHONE_DISPLAY} e, per informazioni di
+              tipo amministrativo, all&apos;indirizzo{" "}
+              <a href={`mailto:${ADMIN_EMAIL}`} className="font-medium text-marino underline">
+                {ADMIN_EMAIL}
+              </a>
+              , è il titolare del trattamento dei dati personali raccolti tramite questo
+              sito.
             </p>
 
             <h2 className="mt-8 font-heading text-xl font-bold text-marino">

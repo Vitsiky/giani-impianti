@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { InstagramIcon } from "@/components/ui/icons/InstagramIcon";
 import { FacebookIcon } from "@/components/ui/icons/FacebookIcon";
-import { INSTAGRAM_URL, FACEBOOK_URL, PHONE_DISPLAY } from "@/lib/content/contact";
+import { INSTAGRAM_URL, FACEBOOK_URL, PHONE_DISPLAY, ADMIN_EMAIL } from "@/lib/content/contact";
 
 export function Footer() {
   return (
@@ -39,7 +39,14 @@ export function Footer() {
           </div>
         </div>
         <p className="mt-6 text-center text-xs text-muted-foreground sm:text-left">
-          Giani Impianti · P.IVA 02535860973 · Sede legale: Via della Repubblica, Prato
+          Giani Impianti · P.IVA 02535860973 · Sede legale: Viale della Repubblica, 239, Prato
+          (PO) 59100 · Sede operativa: Via Montelupo, 28, Montespertoli (FI) 50025
+        </p>
+        <p className="mt-2 text-center text-xs text-muted-foreground sm:text-left">
+          Per informazioni amministrative:{" "}
+          <a href={`mailto:${ADMIN_EMAIL}`} className="font-medium text-marino hover:underline">
+            {ADMIN_EMAIL}
+          </a>
         </p>
         <p className="mt-2 text-center text-xs text-muted-foreground sm:text-left">
           Sito realizzato da{" "}

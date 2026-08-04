@@ -5,3 +5,4 @@ export const INSTAGRAM_URL = "https://www.instagram.com/giani.impianti";
 export const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61574385837522";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 export const CONTACT_EMAIL_ENV = "CONTACT_EMAIL";
+export const ADMIN_EMAIL = "amministrazione@gianiimpianti.it";
