@@ -29,8 +29,8 @@ export default function PrivacyPage() {
             <p>
               Giani Impianti, con sede legale in Viale della Repubblica, 239, Prato (PO)
               59100 e sede operativa in Via Montelupo, 28, Montespertoli (FI) 50025, P.IVA
-              02535860973, contattabile al numero {PHONE_DISPLAY} e, per informazioni di
-              tipo amministrativo, all&apos;indirizzo{" "}
+              02535860973, contattabile al numero {PHONE_DISPLAY}{" "}
+              e, per informazioni di tipo amministrativo, all&apos;indirizzo{" "}
               <a href={`mailto:${ADMIN_EMAIL}`} className="font-medium text-marino underline">
                 {ADMIN_EMAIL}
               </a>
